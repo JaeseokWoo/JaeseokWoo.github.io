@@ -3,7 +3,7 @@ date: '2022-03-27'
 title: '개발 블로그 시작'
 categories: ['Blog']
 summary: '개발 블로그 시작'
-thumbnail: './my-blog.jpg'
+thumbnail: './my-blog.JPG'
 ---
 
 ## 개발 블로그 시작
@@ -14,15 +14,15 @@ thumbnail: './my-blog.jpg'
 
 https://github.com/zoomkoding/zoomkoding-gatsby-blog
 
-![zoomkoding-blog.JPG](./zoomkoding-blog.jpg)
+![zoomkoding-blog.JPG](./zoomkoding-blog.JPG)
 
 zoomkoding님의 github 블로그 템플릿은 [JaeYeopHan](https://github.com/JaeYeopHan)님의 https://github.com/JaeYeopHan/gatsby-starter-bee 테마와 비슷하면서 자신만의 특유한 움직이는 미모티콘이 인상적이었다.
 
 그런데 내가 원하는 테마가 아니라 금방 싫증이 나버렸다.
 
-그러다 우연히 인프런에 [ji5485](https://github.com/ji5485)님의 \***\*React 기반 Gatsby로 기술 블로그 개발하기\*\*** 강의를 알게 되었다. [https://inf.run/4t53](https://inf.run/4t53)
+그러다 우연히 인프런에 [ji5485](https://github.com/ji5485)님의 **React 기반 Gatsby로 기술 블로그 개발하기** 강의를 알게 되었다. [https://inf.run/4t53](https://inf.run/4t53)
 
-![ji5485-blog-development.JPG](./ji5485-blog-development.jpg)
+![ji5485-blog-development.JPG](./ji5485-blog-development.JPG)
 
 강의가 **무료**인 데다가 React 기반 Gatsby로 개발, 블로그 디자인도 개인적으로 다른 블로그 테마보다 좋아서 수강하였다.
 
@@ -30,7 +30,7 @@ zoomkoding님의 github 블로그 템플릿은 [JaeYeopHan](https://github.com/J
 
 그래서 완성한 블로그 😄!!
 
-![my-blog.JPG](./my-blog.jpg)
+![my-blog.JPG](./my-blog.JPG)
 
 블로그 디자인도 마음에 들고 React와 GraphQL 기술만 익히면 원하는 대로 커스터마이징도 가능하다!!
 

@@ -44,6 +44,11 @@ const MarkdownRenderer = styled.div`
     margin-top: 0;
   }
 
+  img {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+
   h1 {
     font-size: 30px;
   }
@@ -79,8 +84,8 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Link Element Style
   a {
-    color: #4263eb;
-    text-decoration: underline;
+    color: #5d9ab2;
+    text-decoration: none;
   }
 
   // Adjust Code Style
