@@ -14,8 +14,6 @@ thumbnail: './my-blog.JPG'
 
 https://github.com/zoomkoding/zoomkoding-gatsby-blog
 
-![zoomkoding-blog.JPG](./zoomkoding-blog.JPG)
-
 zoomkoding님의 github 블로그 템플릿은 [JaeYeopHan](https://github.com/JaeYeopHan)님의 https://github.com/JaeYeopHan/gatsby-starter-bee 테마와 비슷하면서 자신만의 특유한 움직이는 미모티콘이 인상적이었다.
 
 그런데 내가 원하는 테마가 아니라 금방 싫증이 나버렸다.
