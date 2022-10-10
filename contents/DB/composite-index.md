@@ -3,7 +3,7 @@ date: '2022-03-27'
 title: '복합 인덱스'
 categories: ['DB']
 summary: '복합 인덱스'
-thumbnail: ''
+thumbnail: '../blog/my-blog.JPG'
 ---
 
 ## 복합 인덱스 경우에 따라 타는지 궁금?
@@ -36,7 +36,7 @@ SELECT * FROM index_test.students
 WHERE department IN ('Mathematics', 'Computer Engineering') AND age > 22 AND grade < 3;
 ```
 
-![explain-department-age-grade.JPG](./explain-department-age-grade.JPG)
+<img alt='explain-department-age-grade.JPG' src='./explain-department-age-grade.JPG' width='150'>
 
 index 타는 것 확인!!
 
@@ -47,7 +47,7 @@ SELECT * FROM index_test.students
 WHERE department IN ('Mathematics', 'Computer Engineering') AND age > 22;
 ```
 
-![explain-department-age.JPG](./explain-department-age.JPG)
+<img alt='explain-department-age.JPG' src='./explain-department-age.JPG' width='150'>
 
 index 타는 것 확인!!
 
@@ -58,7 +58,7 @@ SELECT * FROM index_test.students
 WHERE department IN ('Mathematics', 'Computer Engineering') AND grade < 3;
 ```
 
-![explain-department-grade.JPG](./explain-department-grade.JPG)
+<img alt='explain-department-grade.JPG' src='./explain-department-grade.JPG' width='150'>
 
 index 타는 것 확인!!
 
@@ -69,7 +69,7 @@ SELECT * FROM index_test.students
 WHERE age > 22 AND grade < 3;
 ```
 
-![explain-age-grade.JPG](./explain-age-grade.JPG)
+<img alt='explain-age-grade.JPG' src='./explain-age-grade.JPG' width='150'>
 
 index 타지 않는 것 확인!!
 
@@ -80,7 +80,7 @@ SELECT * FROM index_test.students
 WHERE department IN ('Mathematics', 'Computer Engineering');
 ```
 
-![explain-department.JPG](./explain-department.JPG)
+<img alt='explain-department.JPG' src='./explain-department.JPG' width='150'>
 
 index 타는 것 확인!!
 
@@ -91,7 +91,7 @@ SELECT * FROM index_test.students
 WHERE age > 22;
 ```
 
-![explain-age.JPG](./explain-age.JPG)
+<img alt='explain-age.JPG' src='./explain-age.JPG' width='150'>
 
 index 타지 않는 것 확인!!
 
@@ -102,7 +102,7 @@ SELECT * FROM index_test.students
 WHERE grade < 3;
 ```
 
-![explain-grade.JPG](./explain-grade.JPG)
+<img alt='explain-grade.JPG' src='./explain-grade.JPG' width='150'>
 
 index 타지 않는 것 확인!!
 
