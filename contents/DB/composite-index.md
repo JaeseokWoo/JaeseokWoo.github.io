@@ -41,20 +41,35 @@ index 타는 것 확인!!
 
 ### 3. WHERE문에 department, grade 있는 경우
 
+![where-department-grade.JPG](./where-department-grade.JPG)
+![explain-department-grade.JPG](./explain-department-grade.JPG)
+
 index 타는 것 확인!!
 
 ### 4. WHERE문에 age, grade 있는 경우
+
+![where-age-grade.JPG](./where-age-grade.JPG)
+![explain-age-grade.JPG](./explain-age-grade.JPG)
 
 index 타지 않는 것 확인!!
 
 ### 5. WHERE문에 department 있는 경우
 
+![where-department.JPG](./where-department.JPG)
+![explain-department.JPG](./explain-department.JPG)
+
 index 타는 것 확인!!
 
 ### 6. WHERE문에 age 있는 경우
+
+![where-age.JPG](./where-age.JPG)
+![explain-age.JPG](./explain-age.JPG)
 
 index 타지 않는 것 확인!!
 
 ### 7. WHERE문에 grade 있는 경우
 
-index 타는 것 확인!!
+![where-grade.JPG](./where-grade.JPG)
+![explain-grade.JPG](./explain-grade.JPG)
+
+index 타지 않는 것 확인!!
