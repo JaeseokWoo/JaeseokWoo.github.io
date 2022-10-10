@@ -3,7 +3,7 @@ date: '2022-03-27'
 title: '복합 인덱스'
 categories: ['DB']
 summary: '복합 인덱스'
-thumbnail: '../blog/my-blog.JPG'
+thumbnail: './composite-index2.JPG'
 ---
 
 ## 복합 인덱스 경우에 따라 타는지 궁금?
