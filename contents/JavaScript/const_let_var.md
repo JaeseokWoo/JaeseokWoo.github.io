@@ -3,7 +3,7 @@ date: '2022-11-05'
 title: '자바스크립트의 const, let, var'
 categories: ['JavaScript']
 summary: 'conat, let, var'
-thumbnail: ''
+thumbnail: './javascript-var-let-const.jpeg'
 ---
 
 ## 변수를 정의하는 새로운 방법: const, let
