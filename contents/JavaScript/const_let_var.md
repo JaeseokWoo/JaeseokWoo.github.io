@@ -6,6 +6,8 @@ summary: 'conat, let, var'
 thumbnail: './javascript-var-let-const.jpeg'
 ---
 
+이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard) 의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
+
 ## 변수를 정의하는 새로운 방법: const, let
 
 ES5까지의 자바스크립트에서는 var를 이용해서 변수를 정의했고 그게 유일한 방법이었습니다.<br>
