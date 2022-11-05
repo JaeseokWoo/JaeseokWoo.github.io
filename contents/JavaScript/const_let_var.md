@@ -20,7 +20,9 @@ var의 첫 번째 문제는 정의된 변수가 함수 스코프를 가진다는
 
 > 스코프(scope)란?<br>
 > 변수가 사용될 수 있는 영역을 말합니다.<br>
-> 스코프는 변수가 정의된 위치에 의해 결정됩니다.
+> 스코프는 변수가 정의된 위치에 의해 결정됩니다.<br>
+
+https://developer.mozilla.org/ko/docs/Glossary/Scope
 
 var는 함수 스코프이기 때문에 `코드 1`과 같이 함수를 벗어난 영역에서 사용하면 에러가 발생합니다.
 
@@ -118,12 +120,16 @@ for문 뿐만 아니라 while문, switch문, if문 등 모든 코드는 같은 �
 > 즉시 실행 함수<br>
 > 함수를 정의하는 시점에 바로 실행되고 사라집니다.
 
+https://developer.mozilla.org/ko/docs/Glossary/IIFE
+
 var 변수는 함수 스코프이므로 즉시 실행 함수로 묶으면 변수의 스코프를 제한할 수 있지만, 즉시 실행 함수를 작성하기 번거롭고 가독성도 떨어진다는 문제점이 있습니다.
 
 #### 2. 호이스팅
 
 > 호이스팅(hoisting)<br>
 > 정의된 변수는 그 변수가 속한 스코프의 최상단으로 끌러올려진 것 같은 현상
+
+https://developer.mozilla.org/ko/docs/Glossary/Hoisting
 
 var로 정의된 변수는 호이스팅이 일어난다.
 
