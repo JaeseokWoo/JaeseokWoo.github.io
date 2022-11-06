@@ -112,4 +112,86 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>변수를 정의한다는 것은 이전에 없던 변수를 생성한다는 의미로 통용됩니다.<br>
 따라서 위의 코드가 에러 없이 사용될 수 있다는 것은 직관적이지 않으며 버그로 이어질 수 있습니다.<br>
 뿐만 아니라, var는 재할당 가능한 변수로만 만들 수밖에 없다는 점입니다.<br>
-상수처럼 쓸 값도 무조건 재할당 가능한 변수로 만들어서 사용할 수밖에 없습니다.</p></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© 2022 Developer Jaeseok, Powered By Gatsby.</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/JavaScript/const_let_var/";window.___webpackCompilationHash="74c871a16d8786e55258";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-4718f0fec20e0d09d7f5.js"],"app":["/app-f35c8af03fafe1260385.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-33585fe7643d5714358c.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-0f6c94ca0b9140a47dd4.js"],"component---src-pages-info-tsx":["/component---src-pages-info-tsx-af04f2ce9f8722512044.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-1681abe61ff7a7739156.js"]};/*]]>*/</script><script src="/polyfill-4718f0fec20e0d09d7f5.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-1681abe61ff7a7739156.js" async=""></script><script src="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-c31a89fe65d89ac0c62a.js" async=""></script><script src="/cb1608f2-d860e9dbef9a05cd5b64.js" async=""></script><script src="/app-f35c8af03fafe1260385.js" async=""></script><script src="/framework-6bdc9aaa9caa3de6408b.js" async=""></script><script src="/webpack-runtime-74e48466ae7acb81d09e.js" async=""></script></body></html>
+상수처럼 쓸 값도 무조건 재할당 가능한 변수로 만들어서 사용할 수밖에 없습니다.</p>
+<h3>var의 문제를 해결하는 const, let</h3>
+<h4>const, let은 블록 스코프</h4>
+<p>var는 함수 스코프였지만 const, let은 블록(block) 스코프입니다.<br>
+블록 스코프는 대부분의 언어에서 사용하므로 개발자에게 익숙한 개념입니다.<br></p>
+<p><code class="language-text">코드 7</code>와 같이 if문의 블록 안에서 정의된 변수는 if문을 벗어나면 참조할 수 없으며, 사용하려고 하면 에러가 발생합니다.<br></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 코드 7 - 블록 스코프에서는 블록을 벗어나면 변수를 사용할 수 없습니다.</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 참조 에러</span></code></pre></div>
+<p>실행 결과</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">console.log<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> // 참조 에러
+            ^
+
+ReferenceError: i is not defined</code></pre></div>
+<p>이번에는 블록 스코프에서 같은 이름의 변수를 정의하는 경우를 확인해보겠습니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 코드 8 - 블록 스코프에서 같은 이름을 갖는 변수의 사용 예시</span>
+<span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token string">'bar1'</span><span class="token punctuation">;</span> <span class="token comment">// (1)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bar1</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token string">'bar2'</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bar2</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>실행 결과</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">bar1
+bar2
+bar1</code></pre></div>
+<p>마지막 줄의 foo 변수는 같은 블록에서 정의된 변수 (1)를 참조하므로 bar1을 출력합니다.</p>
+<h4>const, let의 호이스팅</h4>
+<p>const와 let으로 정의된 변수 또한, 호이스팅이 됩니다.<br>
+하지만, const, let은 변수를 정의하기 전에 사용하려고 하면 참조 에러가 발생합니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 코드 9 - const, let 변수는 변수가 정의된 시점보다 먼저 변수를 사용할 수 없습니다.</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 참조 에러</span>
+<span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></code></pre></div>
+<p>실행 결과</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">console.log<span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> // 참조 에러
+            ^
+
+ReferenceError: Cannot access <span class="token string">'foo'</span> before initialization</code></pre></div>
+<p>실행 결과를 통해 const, let으로 정의된 변수는 호이스팅이 되지 않는다고 생각하지만, const, let으로 정의된 변수도 호이스팅이 일어납니다.<br>
+다만, 변수가 정의된 위치와 호이스팅된 위치 사이에서 변수를 사용하려고 하면 에러가 발생하고, 이 구간을 임시적 사각지대(temporal dead zone)라고 부릅니다.<br>
+var로 정의된 변수에는 임시적 사각지대가 없기 때문에 참조 에러가 발생하지 않는 것입니다.</p>
+<h4>const는 변수를 재할당 불가능하게 만듭니다.</h4>
+<p>cons로 정의된 변수는 재할당이 불가능합니다.</p>
+<p>반대로, let, var로 정의된 변수는 재할당할 수 있습니다.</p>
+<p>재할당 불가능한 변수는 프로그램의 복잡도를 상당히 낮춰주기 때문에 되도록이면 재할당이 불가능한 변수를 사용하는게 좋습니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 코드 10 - const로 정의된 변수만 재할당 불가능 합니다.</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+foo <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span> <span class="token comment">// 에러 없음</span>
+<span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+value <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span> <span class="token comment">// 에러 없음</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+bar <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span> <span class="token comment">// 에러 발생</span></code></pre></div>
+<p>실행 결과</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">bar <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span> // 에러 발생
+    ^
+
+TypeError: Assignment to constant variable.</code></pre></div>
+<p>다만, const 정의된 객체의 내부 속성값은 수정 가능하다는 점을 주의해야 합니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 코드 11 - const로 정의해도 객체의 내부 속성값은 수정 가능합니다.</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">prop1</span><span class="token operator">:</span> <span class="token string">'a'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+bar<span class="token punctuation">.</span>prop1 <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span>
+bar<span class="token punctuation">.</span>prop2 <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// { prop1: 'b', prop2: 123 }</span>
+<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 100, 20, 300 ]</span></code></pre></div>
+<p>실행 결과</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token punctuation">{</span> prop1: <span class="token string">'b'</span>, prop2: <span class="token number">123</span> <span class="token punctuation">}</span>
+<span class="token punctuation">[</span> <span class="token number">100</span>, <span class="token number">20</span>, <span class="token number">300</span> <span class="token punctuation">]</span></code></pre></div>
+<p>객체의 내부 속성값도 수정 불가능하게 만들고 싶다면 <code class="language-text">immer</code>, <code class="language-text">immutable.js</code> 등의 외부 패키지를 활용하는게 좋습니다.
+이러한 외부 패키지는 객체를 수정하려고 할 때, 기존 객체는 변경하지 않고 새로운 객체를 생성합니다.</p>
+<p>새로운 객체를 생성하는 편의 기능은 필요 없고 수정만 할 수 없도록 차단하고 싶다면, 자바스크립트 내장 함수를 이용하면 됩니다.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions" target="_blank" rel="nofollow">Object.preventExtensions</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/seal" target="_blank" rel="nofollow">Object.seal</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze" target="_blank" rel="nofollow">Object.freeze</a></li>
+</ul></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© 2022 Developer Jaeseok, Powered By Gatsby.</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/JavaScript/const_let_var/";window.___webpackCompilationHash="74c871a16d8786e55258";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-4718f0fec20e0d09d7f5.js"],"app":["/app-f35c8af03fafe1260385.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-33585fe7643d5714358c.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-0f6c94ca0b9140a47dd4.js"],"component---src-pages-info-tsx":["/component---src-pages-info-tsx-af04f2ce9f8722512044.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-1681abe61ff7a7739156.js"]};/*]]>*/</script><script src="/polyfill-4718f0fec20e0d09d7f5.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-1681abe61ff7a7739156.js" async=""></script><script src="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-c31a89fe65d89ac0c62a.js" async=""></script><script src="/cb1608f2-d860e9dbef9a05cd5b64.js" async=""></script><script src="/app-f35c8af03fafe1260385.js" async=""></script><script src="/framework-6bdc9aaa9caa3de6408b.js" async=""></script><script src="/webpack-runtime-74e48466ae7acb81d09e.js" async=""></script></body></html>
