@@ -6,7 +6,7 @@ summary: 'conat, let, var'
 thumbnail: './javascript-var-let-const.jpeg'
 ---
 
-이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard) 의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
+이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard)의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
 
 ## 변수를 정의하는 새로운 방법: const, let
 
@@ -20,11 +20,9 @@ ES6에서는 const, let을 이용하는 새로운 변수 정의 방법이 생겼
 
 var의 첫 번째 문제는 정의된 변수가 함수 스코프를 가진다는 것입니다.
 
-> 스코프(scope)란?<br>
+> [스코프(scope)](https://developer.mozilla.org/ko/docs/Glossary/Scope)란?<br>
 > 변수가 사용될 수 있는 영역을 말합니다.<br>
 > 스코프는 변수가 정의된 위치에 의해 결정됩니다.<br>
-
-https://developer.mozilla.org/ko/docs/Glossary/Scope
 
 var는 함수 스코프이기 때문에 `코드 1`과 같이 함수를 벗어난 영역에서 사용하면 에러가 발생합니다.
 
@@ -119,19 +117,15 @@ for문 뿐만 아니라 while문, switch문, if문 등 모든 코드는 같은 �
 
 이러한 var 변수의 스코프를 제한하기 위해 즉시 실행 함수를 사용하기도 합니다.
 
-> 즉시 실행 함수<br>
+> [즉시 실행 함수](https://developer.mozilla.org/ko/docs/Glossary/IIFE)<br>
 > 함수를 정의하는 시점에 바로 실행되고 사라집니다.
 
-https://developer.mozilla.org/ko/docs/Glossary/IIFE
-
-var 변수는 함수 스코프이므로 즉시 실행 함수로 묶으면 변수의 스코프를 제한할 수 있지만, 즉시 실행 함수를 작성하기 번거롭고 가독성도 떨어진다는 문제점이 있습니다.
+var 변수는 함수 스코프이므로 즉시 실행 함수로 묶으면 변수의 스코프를 제한할 수 있지만, 즉시 실행 함수를 작성하기 번거롭고 가독성도 떨어진다는 문제점이 있습니다.<br>
 
 #### var의 문제 2. 호이스팅
 
-> 호이스팅(hoisting)<br>
+> [호이스팅(hoisting)](https://developer.mozilla.org/ko/docs/Glossary/Hoisting)<br>
 > 정의된 변수는 그 변수가 속한 스코프의 최상단으로 끌러올려진 것 같은 현상
-
-https://developer.mozilla.org/ko/docs/Glossary/Hoisting
 
 var로 정의된 변수는 호이스팅이 일어난다.
 
@@ -237,7 +231,7 @@ bar2
 bar1
 ```
 
-마지막 줄의 foo 변수는 같은 블록에서 정의된 변수 (1)를 참조하므로 bar1을 출력합니다.
+마지막 줄의 foo 변수는 같은 블록에서 정의된 변수 (1)를 참조하므로 bar1을 출력합니다.<br>
 
 #### const, let의 호이스팅
 
@@ -262,11 +256,11 @@ ReferenceError: Cannot access 'foo' before initialization
 
 실행 결과를 통해 const, let으로 정의된 변수는 호이스팅이 되지 않는다고 생각하지만, const, let으로 정의된 변수도 호이스팅이 일어납니다.<br>
 다만, 변수가 정의된 위치와 호이스팅된 위치 사이에서 변수를 사용하려고 하면 에러가 발생하고, 이 구간을 임시적 사각지대(temporal dead zone)라고 부릅니다.<br>
-var로 정의된 변수에는 임시적 사각지대가 없기 때문에 참조 에러가 발생하지 않는 것입니다.
+var로 정의된 변수에는 임시적 사각지대가 없기 때문에 참조 에러가 발생하지 않는 것입니다.<br>
 
 #### const는 변수를 재할당 불가능하게 만듭니다.
 
-cons로 정의된 변수는 재할당이 불가능합니다.
+const로 정의된 변수는 재할당이 불가능합니다.
 
 반대로, let, var로 정의된 변수는 재할당할 수 있습니다.
 
@@ -292,7 +286,7 @@ bar = 'b'; // 에러 발생
 TypeError: Assignment to constant variable.
 ```
 
-다만, const 정의된 객체의 내부 속성값은 수정 가능하다는 점을 주의해야 합니다.
+다만, const로 정의된 객체의 내부 속성값은 수정 가능하다는 점을 주의해야 합니다.
 
 ```js
 // 코드 11 - const로 정의해도 객체의 내부 속성값은 수정 가능합니다.
