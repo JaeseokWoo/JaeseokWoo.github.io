@@ -13,6 +13,7 @@ thumbnail: './javascript-var-let-const.jpeg'
 ### 단축 속성명
 
 단축 속성명(shorthand property names)은 객체 리터럴 코드를 간편하게 작성할 목적으로 만들어진 문법입니다.
+
 속성명을 사용하면 `코드 1`과 같이 간편하게 새로운 객체를 만들 수 있습니다.
 
 ```js
