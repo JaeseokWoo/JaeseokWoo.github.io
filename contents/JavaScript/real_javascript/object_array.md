@@ -1,5 +1,5 @@
 ---
-date: '2022-11-08'
+date: '2022-11-09'
 title: '자바스크립트의 객체와 배열'
 categories: ['JavaScript']
 summary: 'object, array'
