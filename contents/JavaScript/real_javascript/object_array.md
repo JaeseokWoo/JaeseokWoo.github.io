@@ -172,6 +172,7 @@ console.log(b);
 배열의 속성값이 `undefined`라면 정의된 기본값이 할당되고, 그렇지 않다면 원래의 속성값이 할당됩니다.
 
 ```js
+// 코드 - 9 배열 비구조화에서의 기본값
 const arr = [1];
 const [a = 10, b = 20] = arr;
 console.log(a);
@@ -188,3 +189,109 @@ console.log(b);
 첫 번째 변수의 속성값은 존재하기 때문에 기본값 `10`은 사용되지 않고 속성값이 그대로 할당됩니다.
 
 두 번째 변수의 속성값은 `undefined`이므로 기본값 20이 할당됩니다.
+
+배열 비구조화를 사용하면 두 변수의 값을 쉽게 교환할 수 있습니다.
+
+```js
+// 코드 - 10 배열 비구조화를 이용해서 두 변수의 값을 교환하기
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
+console.log(a); // 2
+console.log(b); // 1
+```
+
+실행 결과
+
+```shell
+2
+1
+```
+
+일반적으로 두 변수가 값을 교환하기 위해서는 제 3의 변수를 이용하는게 일반적입니다.
+
+하지만 배열 비구조화를 사용하면 제 3의 변수없이 코드를 구현할 수 있습니다.
+
+배열에서 일부 속성값을 무시하고 진행하고 싶다면 건너뛰는 개수 만큼 쉼표를 입력하면 됩니다.
+
+```js
+// 코드 11 - 쉼표를 이용해서 일부 속성값을 건너뛰기
+const arr = [1, 2, 3];
+const [a, , c] = arr;
+console.log(a); // 1
+console.log(b); // 3
+```
+
+첫 번째 속성값은 변수 a에 할당되고, 두 번째 속성값은 건너뛰고 세 번째 속성값이 변수 c에 할당됩니다.
+
+쉼표 개수만큼을 제외한 나머지를 새로운 배열로 만들 수도 있습니다.
+
+```js
+// 코드 12 - 나머지 값을 별도의 배열로 만들기
+const arr = [1, 2, 3];
+const [first, ...rest1] = arr;
+console.log(rest1); // [2, 3]
+const [a, b, c, ...rest2] = arr;
+console.log(rest2); // []
+```
+
+배열 비구조화 시 마지막에 ...와 함께 변수명을 입력하면 나머지 모든 속성값이 새로운 배열로 만들어집니다.
+
+나머지 속성값이 존재하지 않으면 빈 배열이 만들어집니다.
+
+### 객체 비구조화
+
+객체 비구조화(object destructuring)는 객체의 여러 속성값을 변수로 쉽게 할당할 수 있는 문법입니다.
+
+```js
+// 코드 13 - 객체 비구조화 간단한 예
+const obj = { age: 21, name: 'mike' };
+const { age, name } = obj;
+console.log(age); // 21
+console.log(name); // mike
+```
+
+객체 비구조화에서는 중괄호를 사용합니다.
+
+배열 비구조화에서는 배열의 순서가 중요했지만 객체 비구조화에서는 순서는 무의미합니다.
+
+하지만 배열 비구조화에서 왼쪽 변수의 이름은 임의로 결정할 수 있지만, 객체 비구조화에서는 기존 속성명을 그대로 사용해야 합니다.
+
+```js
+// 코드 14 - 객체 비구조화에서는 순서는 상관없고 속성명이 중요하다
+const obj = { age: 21, name: 'mike' };
+const { name, age } = obj;
+console.log(age); // 21
+console.log(name); // mike
+
+const { a, b } = obj;
+console.log(a); // undefined
+console.log(b); // undefined
+```
+
+존재하지 않는 속성명을 사용하면 `undefined`가 할당 됩니다.
+
+객체 비구조화에서는 속성명과 다른 이름으로 변수를 생성할 수 있습니다. 이는 중복된 변수명을 피하거나 좀 더 구체적인 변수명을 만들 때 좋습니다.
+
+```js
+// 코드 15 - 객체 비구조화에서 별칭 사용하기
+const obj = { age: 21, name: 'mike' };
+const { age: theAge, name } = obj;
+console.log(theAge); // 21
+console.log(age); // 참조 에러
+```
+
+속셩명 `age`의 값을 `age`변수에는 할당되지 않고 `theAge`변수에 할당합니다.
+
+객체 비구조화에서도 기본값을 정의할 수 있습니다. 배열 비구조하처럼 속성값이 `undefined`인 경우에는 기본값이 들어갑니다.
+
+```js
+// 코드 16 - 객체 비구조화에서의 기본값
+const obj = { age: undefined, name: null, grade: 'A' };
+const { age = 0, name = 'noName', grade = 'F' } = obj;
+console.log(age); // 0
+console.log(name); // null
+console.log(grade); // A
+```
+
+`age`는 `undefined`이므로 기본값 0이 들어갑니다. 속성값이 `null`이면 기본값은 들어가지 않습니다.
