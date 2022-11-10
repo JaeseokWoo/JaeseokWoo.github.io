@@ -295,3 +295,82 @@ console.log(grade); // A
 ```
 
 `age`는 `undefined`이므로 기본값 0이 들어갑니다. 속성값이 `null`이면 기본값은 들어가지 않습니다.
+
+기본값을 정의하면서 별칭을 함께 사용할 수 있습니다.
+
+```js
+// 코드 17 - 기본값과 별칭 동시에 사용하기
+const obj = { age: undefined, name: 'mike' };
+const { age: theAge = 0, name } = obj;
+console.log(theAge);
+```
+
+기본값으로 함수의 반환값을 넣을 수 있습니다.
+
+```js
+// 코드 18 - 함수를 이용한 기본값
+function getDefaultAge() {
+  console.log('hello');
+  return 0;
+}
+const obj = { age: 21, grade: 'A' };
+const { age = getDefaultAge(), grade } = obj; // hello 출력되지 않음
+console.log(age); // 21
+```
+
+여기서 중요한 점은 기본값이 사용될 때만 함수가 호출된다는 점입니다. 그래서 age의 속성값은 `undefined`가 아니므로 기본값이 사용되지 않았고, `getDefaultAge`함수도 호출되지 않았습니다.
+
+객체 비구조화에서도 사용되지 않는 나머지 속성들을 별도의 객체로 생성할 수 있습니다.
+
+```js
+// 코드 19 - 객체 비구조화에서 나머지 속성들을 별도의 객체로 생성하기
+const obj = { age: 21, name: 'mike', grade: 'A' };
+const { age, ...rest } = obj;
+console.log(rest); // { name: 'mike', grade: 'A' }
+```
+
+for 문에서 객체를 원소로 갖는 배열을 순회할 때 객체 비구조화를 사용하면 편리합니다.
+
+```js
+// 코드 20 - for 문에서 객체 비구조화를 활용한 예
+const people = [
+  { age: 21, name: 'mike' },
+  { age: 51, name: 'sara' },
+];
+
+for (const { age, name } of people) {
+  // ...
+}
+```
+
+### 비구조화 심화 학습
+
+비구조화는 객체와 배열이 중첩되어 있을 때도 사용할 수 있습니다.
+
+```js
+// 코드 21 - 중첩된 객체의 비구조화 사용 예
+const obj = { name: 'mike', mother: { name: 'sara' } };
+const {
+  name,
+  mother: { name: motherName },
+} = obj;
+console.log(name); // mike
+console.log(motherName); // sara
+console.log(mother); // 참조 에러
+```
+
+비구조화의 결과로 motherName이라는 이름의 변수만 생성됩니다.
+
+비구조화에서 기본값의 정의는 변수로 한정되지 않습니다.
+
+```js
+// 코드 22 - 기본값은 변수 단위가 아니라 패턴 단위로 적용됩니다.
+const [{ prop: x } = { prop: 123 }] = []; // (1)
+console.log(x); // 123
+const [{ prop: y } = { prop: 123 }] = [{}]; // (2)
+console.log(y); // undefined
+```
+
+(1) 코드에서 `{ prop: x }`는 배열의 첫 번째 원소를 가리키고, `{ prop: 123 }`은 그 기본값을 정의합니다. 따라서, 첫 번째 원소가 존재하지 않아서 기본값이 할당되고 결과적으로 변수 `x`에는 기본값에서 정의된 `123`이 들어갑니다.
+
+(2) 배열의 첫 번째 원소가 존재하므로 기본값이 할당되지 않습니다. 그리고 첫 번째 원소에는 `prop`이라는 이름의 속성명이 존재하지 않으므로 `x`에는 `undefined`가 할당됩니다.
