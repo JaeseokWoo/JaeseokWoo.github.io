@@ -29,14 +29,14 @@ const MarkdownRenderer = styled.div`
   h2,
   h3 {
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
-  * + h1,
+  /* * + h1,
   * + h2,
   * + h3 {
-    margin-top: 30px;
-  }
+    margin-top: 10px;
+  } */
 
   hr + h1,
   hr + h2,
@@ -45,7 +45,6 @@ const MarkdownRenderer = styled.div`
   }
 
   img {
-    width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   }
 
