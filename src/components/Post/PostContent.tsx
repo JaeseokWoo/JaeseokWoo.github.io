@@ -106,11 +106,11 @@ const MarkdownRenderer = styled.div`
 
   // My Custom Style
   aside {
-    background: #d3d3d3;
+    background: #eff0ff;
   }
 
   mark {
-    background: #ffc0cb;
+    background: #fff0f0;
   }
 
   // Markdown Responsive Design
