@@ -18,8 +18,8 @@ ES5까지의 자바스크립트에서는 `var`를 이용해서 변수를 정의�
 
 `var`의 첫 번째 문제는 정의된 변수가 **함수 스코프**를 가진다는 것입니다.
 
-<aside style="background-color:#808080">
-📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Scope" style="text-decoration:none;color:black">[스코프(scope)]</a><br>
+<aside>
+📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Scope">[스코프(scope)]</a><br>
 변수가 사용될 수 있는 영역을 말합니다.<br>
 스코프는 변수가 정의된 위치에 의해 결정됩니다.
 </aside>
@@ -81,8 +81,8 @@ for문 뿐만 아니라 while문, switch문, if문 등 모든 코드는 같은 �
 
 이러한 `var` 변수의 스코프를 제한하기 위해 **즉시 실행 함수(IIFE)**를 사용하기도 합니다.
 
-<aside style="background-color:#808080">
-📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Scopehttps://developer.mozilla.org/ko/docs/Glossary/IIFE" style="text-decoration:none;color:black">[즉시 실행 함수(IIFE)]</a><br>
+<aside>
+📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Scopehttps://developer.mozilla.org/ko/docs/Glossary/IIFE">[즉시 실행 함수(IIFE)]</a><br>
 함수를 정의하는 시점에 바로 실행되고 사라집니다.
 </aside>
 
@@ -90,8 +90,8 @@ for문 뿐만 아니라 while문, switch문, if문 등 모든 코드는 같은 �
 
 ### `var`의 문제 2. 호이스팅
 
-<aside style="background-color:#808080">
-📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Hoisting" style="text-decoration:none;color:black">[호이스팅(hoisting)]</a><br>
+<aside>
+📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Hoisting">[호이스팅(hoisting)]</a><br>
 정의된 변수는 그 변수가 속한 스코프의 최상단으로 끌러올려진 것 같은 현상
 </aside>
 
