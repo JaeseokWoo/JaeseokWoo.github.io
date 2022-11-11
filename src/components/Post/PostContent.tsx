@@ -32,11 +32,11 @@ const MarkdownRenderer = styled.div`
     margin-bottom: 15px;
   }
 
-  /* * + h1,
+  * + h1,
   * + h2,
   * + h3 {
     margin-top: 10px;
-  } */
+  }
 
   hr + h1,
   hr + h2,
@@ -102,6 +102,11 @@ const MarkdownRenderer = styled.div`
   code[class*='language-'],
   pre[class*='language-'] {
     tab-size: 2;
+  }
+
+  // My Custom Style
+  aside {
+    background: #d3d3d3;
   }
 
   // Markdown Responsive Design
