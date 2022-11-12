@@ -1,6 +1,6 @@
 ---
 date: '2022-11-05'
-title: '자바스크립트의 const, let, var'
+title: '변수 선언'
 categories: ['JavaScript']
 summary: 'conat, let, var'
 thumbnail: './javascript-var-let-const.jpeg'
@@ -12,7 +12,7 @@ thumbnail: './javascript-var-let-const.jpeg'
 
 ES5까지의 자바스크립트에서는 var를 이용해서 변수를 정의했고 그게 유일한 방법이었습니다. ES6에서는 const, let을 이용하는 새로운 변수 정의 방법이 생겼습니다. 새로운 방법이 나온 이유는 기존 방식인 var로는 해결되지 않는 문제가 있었기 때문입니다.
 
-## 1️⃣ var의 문제점
+## var의 문제점
 
 ### var의 문제 1. 함수 스코프
 
