@@ -3,7 +3,7 @@ date: '2022-11-05'
 title: '변수 선언'
 categories: ['JavaScript']
 summary: 'conat, let, var'
-thumbnail: './javascript-var-let-const.jpeg'
+thumbnail: '../images/practicial_javascript.jpeg'
 ---
 
 이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard)의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
