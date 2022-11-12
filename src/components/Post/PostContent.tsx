@@ -110,7 +110,7 @@ const MarkdownRenderer = styled.div`
   }
 
   mark {
-    background: ##ffe3ee;
+    background: #ffe3ee;
   }
 
   // Markdown Responsive Design
