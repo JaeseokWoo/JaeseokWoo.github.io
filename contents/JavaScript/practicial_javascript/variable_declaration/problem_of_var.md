@@ -2,7 +2,7 @@
 date: '2022-11-05'
 title: '변수 선언 - var의 문제점'
 categories: ['JavaScript']
-summary: 'var'
+summary: 'var의 문제점'
 thumbnail: '../images/practicial_javascript.jpeg'
 ---
 

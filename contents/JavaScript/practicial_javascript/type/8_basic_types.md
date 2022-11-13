@@ -1,6 +1,6 @@
 ---
 date: '2022-11-13'
-title: '타입'
+title: '타입 - 8가지 기본 타입'
 categories: ['JavaScript']
 summary: '8가지 기본 타입'
 thumbnail: '../images/practicial_javascript.jpeg'

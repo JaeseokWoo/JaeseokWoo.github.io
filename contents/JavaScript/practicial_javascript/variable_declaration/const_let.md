@@ -1,5 +1,5 @@
 ---
-date: '2022-11-05'
+date: '2022-11-06'
 title: '변수 선언 - const, let'
 categories: ['JavaScript']
 summary: 'const, let'
