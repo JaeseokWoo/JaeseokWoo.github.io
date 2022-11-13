@@ -1,6 +1,6 @@
 ---
 date: '2022-11-06'
-title: '변수 선언 - const, let'
+title: 'const, let'
 categories: ['JavaScript']
 summary: 'const, let'
 thumbnail: '../images/practicial_javascript.jpeg'
@@ -8,11 +8,9 @@ thumbnail: '../images/practicial_javascript.jpeg'
 
 이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard)의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
 
-# 변수 선언
+# const, let
 
-## const, let
-
-### const, let은 블록 스코프
+## const, let은 블록 스코프
 
 var는 함수 스코프였지만 const, let은 **블록(block) 스코프**입니다. 블록 스코프는 대부분의 언어에서 사용하므로 개발자에게 익숙한 개념입니다.
 
@@ -43,7 +41,7 @@ console.log(foo); // bar1
 
 마지막 줄의 foo변수는 같은 블록에서 정의된 변수 (1)를 참조하므로 `bar1`을 출력합니다.
 
-### const, let의 호이스팅
+## const, let의 호이스팅
 
 **const와 let으로 정의된 변수 또한, 호이스팅이 됩니다.** 하지만, const, let은 변수를 정의하기 전에 사용하려고 하면 참조 에러가 발생합니다.
 
@@ -59,7 +57,7 @@ const foo = 1;
 
 추가적으로 var 키워드와의 차이점은 **var는 호이스팅이 된 후에 `undefined`가 할당되지만 const와 let은 아무 값도 할당되지 않습니다.**
 
-### const는 변수를 재할당 불가능하게 만듭니다.
+## const는 변수를 재할당 불가능하게 만듭니다.
 
 const로 정의된 변수는 재할당이 불가능합니다. 반대로, let, var로 정의된 변수는 재할당할 수 있습니다. 재할당 불가능한 변수는 프로그램의 복잡도를 상당히 낮춰주기 때문에 되도록이면 재할당이 불가능한 변수를 사용하는게 좋습니다.
 

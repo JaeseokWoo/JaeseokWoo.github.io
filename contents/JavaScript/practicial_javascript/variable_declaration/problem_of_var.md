@@ -1,6 +1,6 @@
 ---
 date: '2022-11-05'
-title: '변수 선언 - var의 문제점'
+title: 'var의 문제점'
 categories: ['JavaScript']
 summary: 'var의 문제점'
 thumbnail: '../images/practicial_javascript.jpeg'
@@ -8,13 +8,11 @@ thumbnail: '../images/practicial_javascript.jpeg'
 
 이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard)의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
 
-# 변수 선언
-
 ES5까지의 자바스크립트에서는 var를 이용해서 변수를 정의했고 그게 유일한 방법이었습니다. ES6에서는 const, let을 이용하는 새로운 변수 정의 방법이 생겼습니다. 새로운 방법이 나온 이유는 기존 방식인 var로는 해결되지 않는 문제가 있었기 때문입니다.
 
-## var의 문제점
+# var의 문제점
 
-### var의 문제 1. 함수 스코프
+## var의 문제 1. 함수 스코프
 
 var의 첫 번째 문제는 정의된 변수가 **함수 스코프**를 가진다는 것입니다.
 
@@ -99,7 +97,7 @@ console.log(i); // 참조 에러
 
 var 변수는 함수 스코프이므로 즉시 실행 함수로 묶으면 변수의 스코프를 제한할 수 있지만, `코드 3-1`처럼 즉시 실행 함수를 작성하기 번거롭고 가독성도 떨어진다는 문제점이 있습니다.
 
-### var의 문제 2. 호이스팅
+## var의 문제 2. 호이스팅
 
 <aside>
 📖 <a href="https://developer.mozilla.org/ko/docs/Glossary/Hoisting">호이스팅(hoisting)</a><br>
@@ -138,7 +136,7 @@ console.log(myVar); // 2
 var myVar = 1;
 ```
 
-### var의 문제 3. 재정의
+## var의 문제 3. 재정의
 
 var의 또 다른 문제는 한 번 정의된 변수를 재정의할 수 있습니다.
 

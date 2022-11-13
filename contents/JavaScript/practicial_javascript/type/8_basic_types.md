@@ -1,6 +1,6 @@
 ---
 date: '2022-11-13'
-title: '타입 - 8가지 기본 타입'
+title: '8가지 기본 타입'
 categories: ['JavaScript']
 summary: '8가지 기본 타입'
 thumbnail: '../images/practicial_javascript.jpeg'
@@ -8,11 +8,9 @@ thumbnail: '../images/practicial_javascript.jpeg'
 
 이 포스트는 [이재승님의 실전 자바스크립트](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/dashboard)의 강의와 책 내용을 정리하기 위해 작성된 글 입니다.
 
-# 타입
+# 8가지 기본 타입
 
-## 8가지 기본 타입
-
-자바스크립트에는 number, bigint, string, boolean, object, symbol, undefined, null 이렇게 8가지 기본 타입이 있습니다.
+자바스크립트에는 `number`, `bigint`, `string`, `boolean`, `object`, `symbol`, `undefined`, `null` 이렇게 8가지 기본 타입이 있습니다.
 
 ```jsx
 // 코드1 자바스크립트의 8가지 기본 타입
@@ -30,13 +28,13 @@ const v8 = null;
 console.log(typeof v5, typeof v6, typeof v7, typeof v8); // object symbol undefined object
 ```
 
-자바스크립트는 typeof키워드를 사용하여 오른쪽에 있는 값의 타입을 문자열로 반환해 줍니다.
+자바스크립트는 typeof 키워드를 사용하여 오른쪽에 있는 값의 타입을 문자열로 반환해 줍니다.
 
 변수 v1은 숫자 타입이고, 변수 v2는 bigint라는 타입인데 큰 숫자를 나타낼 때 사용하는 타입입니다. 끝에 `n`을 입력하면 bigint가 됩니다. 변수 v3은 문자열 타입이고 변수 v4는 boolean 타입입니다.
 
 변수 v5는 object 타입이고 변수 v6는 symbol 타입입니다. symbol 타입은 object에서 유니크한 속성 이름을 표현할 때 사용합니다. 변수 v7, v8은 각각 undefined와 null 타입입니다. 두 타입 모두 값이 없다는 것을 표현할 때 사용합니다. `undefined`는 값이 할당된 적이 없다는 것을 표현할 때 주로 사용합니다.
 
-여기서 특이한 점은 `null`은 object 타입으로 나온다는 것입니다. object로 나오는 이유는 초기 자바스크립트의 typeof에 버그가 있었기 때문입니다. 이후에 버그를 수정하려는 시도가 있었지만 하위 호환성을 위해서 그냥 이 상태로 유지하기로 결정했다고 합니다.
+여기서 특이한 점은 `null`은 object 타입으로 나온다는 것입니다. object로 나오는 이유는 초기 자바스크립트의 `typeof`에 버그가 있었기 때문입니다. 이후에 버그를 수정하려는 시도가 있었지만 하위 호환성을 위해서 그냥 이 상태로 유지하기로 결정했다고 합니다.
 
 8가지 기본 타입 외에 object로부터 파생된 function과 같은 타입도 있습니다.
 
@@ -52,7 +50,7 @@ console.log(typeof MyClass); // function
 
 자바스크립트의 **class는 함수를 기반으로 만들어졌기 때문에** class의 타입을 검사하면 function 타입으로 나옵니다.
 
-typeof로 `null` 의 타입을 확인하면 object라고 나오는데, Object의 toString이라는 함수를 이용하면 null 타입을 구분할 수 있습니다.
+`typeof`로 `null` 의 타입을 확인하면 object라고 나오는데, `Object`의 `toString`이라는 함수를 이용하면 null 타입을 구분할 수 있습니다.
 
 ```jsx
 // 코드3 Object의 toString 함수로 세부적으로 타입 확인
@@ -63,9 +61,9 @@ console.log(typeof []); // object
 console.log(Object.prototype.toString.call([]); // [object Array]
 ```
 
-배열 역시, typeof로 타입을 검사해보면 object라고 나오는데 Object의 toString 함수를 이용하면 배열도 구분해낼 수 있습니다.
+배열 역시, typeof로 타입을 검사해보면 object라고 나오는데 `Object`의 `toString()`을 이용하면 배열도 구분해낼 수 있습니다.
 
-symbol은 유일한 속성 이름을 만들 때 사용합니다.
+`symbol`은 유일한 속성 이름을 만들 때 사용합니다.
 
 ```jsx
 // 코드4 symbol 예시
@@ -76,9 +74,9 @@ obj[idSymbol] = 456;
 console.log(obj); // { id: 123, [Symbol(id)]: 456 }
 ```
 
-symbol을 이용하면 이름 충돌 문제를 해결할 수 있습니다.
+`symbol`을 이용하면 이름 충돌 문제를 해결할 수 있습니다.
 
-타입을 변환할 때는 String, Number, BigInt, Boolean과 같은 함수를 사용할 수 있습니다.
+타입을 변환할 때는 `String`, `Number`, `BigInt`, `Boolean`과 같은 함수를 사용할 수 있습니다.
 
 ```jsx
 // 코드5 타입을 변환해주는 함수
