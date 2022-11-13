@@ -105,8 +105,8 @@ console.log(typeof new String('abc')); // object
 
 const s1 = new String('abc');
 s1.id = 123;
-console.log('value:', s1.valueOf());
-console.log('id:', s1.id);
+console.log('value:', s1.valueOf()); // value: abc
+console.log('id:', s1.id); // id: 123
 ```
 
 new 키워드를 사용해서 문자열을 object로 만들고 id라는 속성값을 붙였습니다. 이렇게 추가로 속성을 붙여서 사용할게 아니라면 new 키워드를 사용할 필요는 없습니다.
@@ -136,7 +136,7 @@ console.log(typeof v13, v13); // boolean true
 console.log(typeof v14, v14); // boolean false
 ```
 
-문자열에서는 문자열의 길이가 0보다 크면 `true`가 됩니다. 빈 문자열은 `false`가 됩니다. Boolean이라는 함수를 사용하지 않고 `!!` (느낌표 두 개)로 표현하는 것도 똑같이 boolean으로 변환하는 효과가 있습니다. `!` (느낌표)는 Logical NOT을 의미합니다. NOT을 두 번 적용했기 때문에 원래 자기 자신의 boolean 값이 나오게됩니다.
+문자열에서는 **문자열의 길이가 0보다 크면 `true`가 됩니다. 빈 문자열은 `false`가 됩니다.** Boolean이라는 함수를 사용하지 않고 `!!` (느낌표 두 개)로 표현하는 것도 똑같이 boolean으로 변환하는 효과가 있습니다. `!` (느낌표)는 Logical NOT을 의미합니다. NOT을 두 번 적용했기 때문에 원래 자기 자신의 boolean 값이 나오게됩니다.
 
 자바스크립트에서 두 값이 같은지 비교하는 방법은 두 가지가 있습니다.
 
