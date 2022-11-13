@@ -114,6 +114,11 @@ const MarkdownRenderer = styled.div`
     background: #ffe3ee;
   }
 
+  code[class='language-text'] {
+    background: #d3d3d3;
+    color: #000000;
+  }
+
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;
