@@ -3,7 +3,7 @@ date: '2022-11-13'
 title: '노드의 정의 - 서버'
 categories: ['Node']
 summary: '서버'
-thumbnail: '../../images/node_js_textbook.jpg'
+thumbnail: '../images/node_js_textbook.jpg'
 ---
 
 # 노드의 정의
