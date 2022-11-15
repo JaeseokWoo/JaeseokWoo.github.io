@@ -1,5 +1,5 @@
 ---
-date: '2022-11-13'
+date: '2022-11-16'
 title: 'number 타입'
 categories: ['JavaScript']
 summary: 'number 타입'
