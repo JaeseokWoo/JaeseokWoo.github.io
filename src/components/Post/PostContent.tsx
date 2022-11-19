@@ -90,7 +90,7 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Code Style
   pre[class*='language-'] {
-    margin: 15px 0;
+    margin: 10px 0;
     padding: 15px;
     font-size: 15px;
 
@@ -108,6 +108,8 @@ const MarkdownRenderer = styled.div`
   // My Custom Style
   aside {
     background: #eff0ff;
+    margin: 5px 0px 10px;
+    padding: 15px;
   }
 
   mark {
