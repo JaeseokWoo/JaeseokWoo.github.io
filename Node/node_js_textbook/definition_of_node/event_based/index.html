@@ -1,0 +1,553 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="naver-site-verification" content="d0e75a884274302bd16f85cb6875b8123c3f5647"/><meta data-react-helmet="true" name="google-site-verification" content="9-DKrNtgOTZKroMW3Gi2ZIGdMsh5PE6m_m-5qu9FRx4"/><meta data-react-helmet="true" name="twitter:creator" content="@JaeseokWoo"/><meta data-react-helmet="true" name="twitter:site" content="@JaeseokWoo"/><meta data-react-helmet="true" name="twitter:image" content="/static/19ad47ac03b4a5aa6e83f3b334b643aa/node_js_textbook.jpg"/><meta data-react-helmet="true" name="twitter:description" content="이벤트 기반"/><meta data-react-helmet="true" name="twitter:title" content="이벤트 기반"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:site_name" content="이벤트 기반"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:image" content="/static/19ad47ac03b4a5aa6e83f3b334b643aa/node_js_textbook.jpg"/><meta data-react-helmet="true" property="og:description" content="이벤트 기반"/><meta data-react-helmet="true" property="og:title" content="이벤트 기반"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" name="description" content="이벤트 기반"/><meta name="generator" content="Gatsby 4.10.2"/><style data-href="/styles.0109ae7f897db2fecdd6.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><title data-react-helmet="true">이벤트 기반</title><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://jaeseokwoo.github.io/Node/node_js_textbook/definition_of_node/event_based/" data-baseprotocol="https:" data-basehost="jaeseokwoo.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link as="script" rel="preload" href="/webpack-runtime-fa85d024fbaaccac3e76.js"/><link as="script" rel="preload" href="/framework-6bdc9aaa9caa3de6408b.js"/><link as="script" rel="preload" href="/app-f35c8af03fafe1260385.js"/><link as="script" rel="preload" href="/cb1608f2-d860e9dbef9a05cd5b64.js"/><link as="script" rel="preload" href="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-c31a89fe65d89ac0c62a.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-c8fd2ead919f8c35e72c.js"/><link as="fetch" rel="preload" href="/page-data/Node/node_js_textbook/definition_of_node/event_based/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1strnqo0"><style data-emotion="css-global 14vkspd">*{padding:0;margin:0;box-sizing:border-box;font-family:'Roboto','Noto Sans KR',sans-serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 3c2gng">.css-3c2gng{z-index:-1;width:100%;height:400px;object-fix:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-3c2gng{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-3c2gng e1opi4mu0"><div style="max-width:300px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;385&#x27; width=&#x27;300&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAaABQDASIAAhEBAxEB/8QAGwAAAQQDAAAAAAAAAAAAAAAAAAMECAkFBgf/xAAZAQACAwEAAAAAAAAAAAAAAAADBQACBAb/2gAMAwEAAhADEAAAAbldVYVg9GwuEIrmAGGlb2VFYBEdEr//xAAcEAABBQEBAQAAAAAAAAAAAAAGAQIDBAUHEzP/2gAIAQEAAQUCztjG313ekjOBbGbtberBIK8WmIaRFk7vMhgkiESPM6OpUO599laDxervlOiLXhjjjb//xAAhEQACAQMDBQAAAAAAAAAAAAABAhEDEiEAQVEQE2Fxkf/aAAgBAwEBPwGlRoVHcXs6ootgQWJwdrrVMSYmM8S9NA7DuqIMRnHzE8+dXGNh6x0//8QAIREAAgIBBAIDAAAAAAAAAAAAAQIDERIABCEiBRMUMUH/2gAIAQIBAT8Bg2fjZ59yqyzzwwRR+hEFPLI/Q3UefrjfDNhH1Qsx4W3n20SyuvzEixNes5EoRQKkr1LKeGK8WDWh17Amzf6ePrR1/8QAKBAAAgICAgIABAcAAAAAAAAAAgMBBAUSERMAIRQVIjIGIzE0cXOy/9oACAEBAAY/ArBY26JkCgbZqwgptQsgGJYkOBNoM5AdoA4A+PUHMD4VW0d2wVeXczj6jHr7K46Pq8+ot2a/5jHKr7inQBOYfwE38hyFuuzKPiixgqORp9FU1qGY5jUCM/WxcFJfVPlu9YyhX7NisdVbRJs166xISa04svYRvsPX3t1iABsvH7ZHhlO1UvY7bLsqzkKNttzKhVtKn4t1GjoPxVTMOM7Y3Fsp9HLgZYrzDkMoR8a2muf26rMWq1mUglKhbYQI1Fre0lmboSgUdslKZYuRYeQfhLn4qnEsyS7iUfPcJSoAK6UlNdCrBOaFI7HXXYhgjvu5sRHCtpHNFZybW2wyqm3ZpW/l7bi1G/FVphfAUsTY3BBicvKNtS4iNn6wMmDtHyMhPLhSn3Igxkrnr6462asgYjkdZEiL+uf8+MiYiY659T/Hn0AAdnDGajA7noI7nx9x6iI7T74GI/SI8//EABsQAQEBAQEAAwAAAAAAAAAAAAERACFBMVFh/9oACAEBAAE/IfEawuCyNIOMjMAeELt4EMT14hITFYlweAQm7leq7O+Xnln3mBSl87DGCQSrwlyZpoyJi+yxSER7H6C7ZuNlrkPyj2xuUCpKlHgAFKcnIkgiKJaLEcoAAgInhHifmoXEx51MSy1XaiP/2gAMAwEAAgADAAAAECj5cf/EAB0RAQEAAgEFAAAAAAAAAAAAAAERITEAQVFhkcH/2gAIAQMBAT8Qca1PaoCAIGEoxxMJdDUQi6GaMQzFjBCBBCsTNu3TJx2+MesfNdNc/8QAGREBAQEBAQEAAAAAAAAAAAAAAREhMUEA/9oACAECAQE/EGEaYqbu9tQGHyHtTAERqQoLYki2kBAQL0oiLRSNJfYia7zPfIHVnDOEAgH3/8QAFxABAQEBAAAAAAAAAAAAAAAAAREAIf/aAAgBAQABPxCSOT5+BkFU+js6ETAPSAQojMFzSJZ3P5JqhnvuMHr0CsecgANDdCvSKnq3RsIp7Bx6+ZUI7DigKN6pqe3y/T2fJNjhZ30vDD2SF0mupmB1BAAAEREUR4ijzS3nZa4TwHQnDnM5e4bcw0w2e8D/2Q==" alt=""/><picture><source type="image/webp" data-srcset="/static/19ad47ac03b4a5aa6e83f3b334b643aa/c9f5e/node_js_textbook.webp 75w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/b113a/node_js_textbook.webp 150w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/7d02d/node_js_textbook.webp 300w" sizes="(min-width: 300px) 300px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 300px) 300px, 100vw" decoding="async" loading="lazy" data-src="/static/19ad47ac03b4a5aa6e83f3b334b643aa/2d8c1/node_js_textbook.jpg" data-srcset="/static/19ad47ac03b4a5aa6e83f3b334b643aa/6d893/node_js_textbook.jpg 75w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/14ccc/node_js_textbook.jpg 150w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/2d8c1/node_js_textbook.jpg 300w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/19ad47ac03b4a5aa6e83f3b334b643aa/c9f5e/node_js_textbook.webp 75w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/b113a/node_js_textbook.webp 150w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/7d02d/node_js_textbook.webp 300w" sizes="(min-width: 300px) 300px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 300px) 300px, 100vw" decoding="async" loading="lazy" src="/static/19ad47ac03b4a5aa6e83f3b334b643aa/2d8c1/node_js_textbook.jpg" srcSet="/static/19ad47ac03b4a5aa6e83f3b334b643aa/6d893/node_js_textbook.jpg 75w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/14ccc/node_js_textbook.jpg 150w,/static/19ad47ac03b4a5aa6e83f3b334b643aa/2d8c1/node_js_textbook.jpg 300w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">이벤트 기반</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>Node</div><div>2022.11.27.</div></div></div></div><style data-emotion="css 1d4e55t">.css-1d4e55t{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-1d4e55t p{padding:3px 0;}.css-1d4e55t h1,.css-1d4e55t h2,.css-1d4e55t h3{font-weight:800;margin-bottom:5px;}.css-1d4e55t *+h1,.css-1d4e55t *+h2,.css-1d4e55t *+h3{margin-top:10px;}.css-1d4e55t hr+h1,.css-1d4e55t hr+h2,.css-1d4e55t hr+h3{margin-top:0;}.css-1d4e55t img{box-shadow:0 0 10px rgba(0, 0, 0, 0.15);}.css-1d4e55t h1{font-size:30px;}.css-1d4e55t h2{font-size:25px;}.css-1d4e55t h3{font-size:20px;}.css-1d4e55t blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-1d4e55t ol,.css-1d4e55t ul{margin-left:20px;padding:15px 0;}.css-1d4e55t hr{border:1px solid #000000;margin:100px 0;}.css-1d4e55t a{color:#5d9ab2;-webkit-text-decoration:none;text-decoration:none;}.css-1d4e55t pre[class*='language-']{margin:10px 0;padding:15px;font-size:15px;}.css-1d4e55t pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-1d4e55t code[class*='language-'],.css-1d4e55t pre[class*='language-']{tab-size:2;}.css-1d4e55t aside{background:#eff0ff;margin:5px 0px 10px;padding:15px;}.css-1d4e55t mark{background:#ffe3ee;}.css-1d4e55t code[class='language-text']{background:#d3d3d3;color:#000000;}@media (max-width: 768px){.css-1d4e55t{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-1d4e55t h1{font-size:23px;}.css-1d4e55t h2{font-size:20px;}.css-1d4e55t h3{font-size:17px;}.css-1d4e55t img{width:100%;}.css-1d4e55t hr{margin:50px 0;}}</style><div class="css-1d4e55t e1ijh0y10"><h1>이벤트 기반</h1>
+<p>이벤트 기반(event-driven)이란 이벤트가 발생할 때 미리 지정해둔 작업을 수행하는 방식을 의미합니다. 이벤트 기반 시스템에서는 특정 이벤트가 발생할 때 무엇을 할지 미리 등록해두어야 합니다. 이를 이벤트 리스너(event listener)에 콜백(callback) 함수를 등록한다고 표현합니다. 노드도 이벤트 기반 방식으로 동작하므로. 이벤트가 발생하면 이벤트 리스너에 등록해둔 콜백 함수를 호출합니다. 발생한 이벤트가 없거나 발생했던 이벤트를 다 처리하면. 노드는 다음 이벤트가 발생할 때까지 대기합니다.</p>
+<p><img src="./images/event_based.JPG" alt="event_based"></p>
+<p>노드가 자바스크립트 코드와 함께 실행되는 내부 과정을 알아보겠습니다.</p>
+<p>먼저 이벤트 루프(event loop), 태스크 큐(task queue), 백드라운드(background)에 대해서 알아보겠습니다.</p>
+<ul>
+<li>이벤트 루프: 이벤트 발생 시 호출할 콜백 함수들을 관리하고, 호출된 콜백 함수의 실행 순서를 결정하는 역할을 담당합니다. 노드가 종료될 때 까지 이벤트 처리를 위한 작업을 반복합니다.</li>
+<li>백그라운드: setTimeout 같은 타이머나 이벤트 리스너들이 대기하는 곳입니다. 자바스크립트가 아닌 다른 언어로 작성된 프로그램이라고 봐도 됩니다. 여러 작업이 동시에 실행될 수 있습니다.</li>
+<li>태스크 큐: 이벤트 발생 후, 백그라운드에서는 태스크 큐로 타이머나 이벤트 리스너의 콜백 함수를 보냅니다. 보통 콜백들은 완료된 순서대로 줄을 서 있지만 특정한 경우에는 순서가 바뀌기도 합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// 노드가 실행시킬 자바스크립트 코드</span>
+<span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>실행 결과</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">시작
+끝
+<span class="token number">3</span>초 후 실행</code></pre></div>
+<p>노드는 자바스크립트 코드의 맨 위부터 한 줄씩 실행합니다. 함수 호출 부분을 발견했다면 호출한 함수를 호출 스택(call stack)에 넣습니다.</p>
+<ol>
+<li>
+<p><strong>파일을 실행하면 먼저 <code class="language-text">anonymous</code>가 호출 스택에 들어갑니다.</strong></p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">👉
+<span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/115e879aeeed40c978f1020495f716de/40547/event_based1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAklEQVQoz3WS26qDQAxF/f+vE3wtPhSFqkVR6/2SwwrsMqdoII5OJivJHqNhGKzve6uqyj6fj03TZOu62jiONs+zNU1jdV37ftd1hhVFYeQRZx9flsU5ER+h7fvuQYDnef6LATiOw9cro0jEA1MyMAFJlhEHtG3bLZCcS6BGDjsUkCKMhiNB27bf8ZHsC+SgkgAihYCsimFlWTpQ5yiuc9Hr9XLhn8+nrzhdqiKHKYqrSKh7+O1AALSd57nFcexgafd7KdoTXN2pcweSzGaWZZYkiT0eD+8wHDX0O1Ms4kX6pWnqYGlDZbm6Ccf7LeQdXt2wkqUd79woP//7/b6Vgw7/AFpBDilN8b3JAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/115e879aeeed40c978f1020495f716de/a59e9/event_based1.webp 192w,
+/static/115e879aeeed40c978f1020495f716de/0ca9f/event_based1.webp 384w,
+/static/115e879aeeed40c978f1020495f716de/dc9b9/event_based1.webp 768w,
+/static/115e879aeeed40c978f1020495f716de/419f7/event_based1.webp 1067w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/115e879aeeed40c978f1020495f716de/3b721/event_based1.png 192w,
+/static/115e879aeeed40c978f1020495f716de/66595/event_based1.png 384w,
+/static/115e879aeeed40c978f1020495f716de/fe486/event_based1.png 768w,
+/static/115e879aeeed40c978f1020495f716de/40547/event_based1.png 1067w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/115e879aeeed40c978f1020495f716de/fe486/event_based1.png"
+            alt="event_based1"
+            title="event_based1"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><strong><code class="language-text">anonymous</code> 함수는 처음 실행 시의 전역 컨텍스트(global context)를 의미합니다.</strong></p>
+</li>
+<li>
+<p>메모리에 <code class="language-text">run</code> 이 선언됩니다.</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">👉<span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7fde41e802b900e73a52b3c05823b3d0/40547/event_based2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBUlEQVQoz3WS26qFUAhF+/+vC3qNHqJ7UXS/52EIRmdTgnu1dTnUWc44jtL3vZRlKcMwyDzPsm2bTNMky7JI0zRS17XGu64TLM9zoY48cXxdV+U4/HnacRyaBHhd178cgPM89Xwzmjj8YFYMzIAUm5EHtO/7J5CaV6Ct/JzQgDRBGhwJ2ra91yd2A7loRQCRwoCclsPSNFVt7R7N7Z6TZZkmwzDUE2dK68hlmuKmd5IkUhTFDbG4AgEwdhzH4rqugk2735diMVa1L8K+hhtIMcEoisTzPPF9Xyd8rvr0L7Ocw4PpFwSBgk0bOpvbNM/1fhvphG9v2IpNO55Zk4+/qqpPOZjwD5jrDZmsYonsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/7fde41e802b900e73a52b3c05823b3d0/a59e9/event_based2.webp 192w,
+/static/7fde41e802b900e73a52b3c05823b3d0/0ca9f/event_based2.webp 384w,
+/static/7fde41e802b900e73a52b3c05823b3d0/dc9b9/event_based2.webp 768w,
+/static/7fde41e802b900e73a52b3c05823b3d0/419f7/event_based2.webp 1067w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/7fde41e802b900e73a52b3c05823b3d0/3b721/event_based2.png 192w,
+/static/7fde41e802b900e73a52b3c05823b3d0/66595/event_based2.png 384w,
+/static/7fde41e802b900e73a52b3c05823b3d0/fe486/event_based2.png 768w,
+/static/7fde41e802b900e73a52b3c05823b3d0/40547/event_based2.png 1067w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/7fde41e802b900e73a52b3c05823b3d0/fe486/event_based2.png"
+            alt="event_based2"
+            title="event_based2"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+</li>
+<li>
+<p><code class="language-text">console.log('시작')</code>이 호출됩니다.</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+👉console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fa94642161ee7021ff9f691369367536/28211/event_based3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVQoz3WS2QqDQAxF/f/P81VQEHdFcd9NOYGUaWkDwZK5c3KTjjfPs4zjKHVdyzRNsq6rHMchy7LItm3SdZ20bav1YRiESJJE6+gt4VDzELpxXZfs+67A53k+zmhw37c0TfNuTJ7nqalAyG4gMCCXLYAD5CKaX0ETr+97dYWILyAb+ReQmo3JCriPKc6oeWVZSpZlEkWRpGkqRVEokG4GBGZAIs9zHc90NDedB4SdhGEoVVXpn8PI1hExDkjbNwbQGcTqCqQT1hH5vi9xHH84+w5q6O1F2Gt4A7lMEacAgyBQh+6obv4LO/P4AZQve+SN2W7obGlu3PG+G6lDl44zg9neSECMyd7Y97914PAFTHYLI2xy/8oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/fa94642161ee7021ff9f691369367536/a59e9/event_based3.webp 192w,
+/static/fa94642161ee7021ff9f691369367536/0ca9f/event_based3.webp 384w,
+/static/fa94642161ee7021ff9f691369367536/dc9b9/event_based3.webp 768w,
+/static/fa94642161ee7021ff9f691369367536/f5086/event_based3.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/fa94642161ee7021ff9f691369367536/3b721/event_based3.png 192w,
+/static/fa94642161ee7021ff9f691369367536/66595/event_based3.png 384w,
+/static/fa94642161ee7021ff9f691369367536/fe486/event_based3.png 768w,
+/static/fa94642161ee7021ff9f691369367536/28211/event_based3.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/fa94642161ee7021ff9f691369367536/fe486/event_based3.png"
+            alt="event_based3"
+            title="event_based3"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><code class="language-text">console.log('시작')</code>이 호출하면서 콘솔에 <code class="language-text">시작</code>이 출력되고, <code class="language-text">concole.log</code> 함수의 역할이 끝나면 호출 스택에서 빠집니다.</p>
+</li>
+<li>
+<p><code class="language-text">setTimeout(run. 3000)</code>이 호출됩니다.</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">👉setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7faec434b9abf0d371f6afc874a1c951/28211/event_based4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABFklEQVQoz3WS2aqEQAxE+/8/z9cBBfcVcd/N5QQig9wJFLTpSqW60E3TJH3fS13XsiyLbNsmx3HoGTRNo5jnWXlUHMfStq2M4/gAHXoOIkUjz3MpikKHuSzLUtI0VXRdJ/u+y3Vdz3K+AQaACiJEsYXBMAwViCO8ruvjnDODiPxX8BzPOM9Tifd9yzAMKs7wu+jh0J7JLM4xxR09l2WZgCRJJIoidWcZMswSgy2Bz/NwCs9ig+MImEx839fMgD2PjZBxABimiKaqqkfE+irIJqxD8jxPHeLMCO+iB59l5s6cqyDDNHkygp/PRx0a4Y1fZXeOg2UVBIH+Y5YNmw3m5vt570Xq8FsdZyZmuQH7qcmNvH/FgcM/D38H8yuf0sAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/7faec434b9abf0d371f6afc874a1c951/a59e9/event_based4.webp 192w,
+/static/7faec434b9abf0d371f6afc874a1c951/0ca9f/event_based4.webp 384w,
+/static/7faec434b9abf0d371f6afc874a1c951/dc9b9/event_based4.webp 768w,
+/static/7faec434b9abf0d371f6afc874a1c951/f5086/event_based4.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/7faec434b9abf0d371f6afc874a1c951/3b721/event_based4.png 192w,
+/static/7faec434b9abf0d371f6afc874a1c951/66595/event_based4.png 384w,
+/static/7faec434b9abf0d371f6afc874a1c951/fe486/event_based4.png 768w,
+/static/7faec434b9abf0d371f6afc874a1c951/28211/event_based4.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/7faec434b9abf0d371f6afc874a1c951/fe486/event_based4.png"
+            alt="event_based4"
+            title="event_based4"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><code class="language-text">setTimeout</code>이 실행되면 타이머와 함께 <code class="language-text">run</code> 콜백을 백그라운드로 보내고, <code class="language-text">setTimeout</code>은 호출 스택에서 빠집니다.</p>
+</li>
+<li>
+<p><code class="language-text">console.log('끝')</code>이 호출됩니다.</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+👉console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f877755c3372500820080c85e650c2d2/28211/event_based5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEklEQVQoz3WSWQqEQAxE+/7H81dEEPcFcd/N8AIRESYQbGOlUinbTdMkwzBIVVUyjqPM8yz7vutzWRZpmkaT977vhUiSRNq2VbwlPNQcTe84z1MJATEkTVPNruu0fl2X5Hmuw7Zt09pxHJpKCPM7AACkTtO6rk8zZ75/eyzAOSabKp7vlb8BIQohZAMsoJ93vlFzRVHoCmEYShRFekYN02i+7/tJmogsy3Q9BoOz4WBcHMdS17UEQSCQl2X5rGc/CQVmAYGn+GskVldCJiEdkOd5qhJlBvgGNfAMM3WmXAlppshVgND3fVVogG/+C/vmOJhX+IgF5g2TLU3Ne73vIFX4Zrd7RZP5Rtqlxjf8/mcHCn9m+QmjCzMSbAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/f877755c3372500820080c85e650c2d2/a59e9/event_based5.webp 192w,
+/static/f877755c3372500820080c85e650c2d2/0ca9f/event_based5.webp 384w,
+/static/f877755c3372500820080c85e650c2d2/dc9b9/event_based5.webp 768w,
+/static/f877755c3372500820080c85e650c2d2/f5086/event_based5.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/f877755c3372500820080c85e650c2d2/3b721/event_based5.png 192w,
+/static/f877755c3372500820080c85e650c2d2/66595/event_based5.png 384w,
+/static/f877755c3372500820080c85e650c2d2/fe486/event_based5.png 768w,
+/static/f877755c3372500820080c85e650c2d2/28211/event_based5.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/f877755c3372500820080c85e650c2d2/fe486/event_based5.png"
+            alt="event_based5"
+            title="event_based5"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><code class="language-text">console.log('끝')</code>이 호출하면서 콘솔에 <code class="language-text">끝</code>이 출력되고, <code class="language-text">concole.log</code> 함수의 역할이 끝나면 호출 스택에서 빠집니다.</p>
+</li>
+<li>
+<p><strong>파일이 끝나면 <code class="language-text">anonymous</code>가 호출 스택에서 빠집니다.</strong></p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+👉</code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c2b3d7f96ba10755993f387497ed47ab/28211/event_based6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVQoz3WSSQqFQAxEvf/t3AkuXDiCivM85PMCEZHfBUFNJ5VKtd40TTIMg5RlKeM4yjzPsu+7PpdlkbquNfju+15AmqbSNI3WW8BDzqPpjfM8lZAihmRZptF1neav65KiKHTYtm2aO45DQwlpBPd965Migok0rev6NPMOAWf/QN1fQlv5CwhRCCF9WIByvjkj5yRkGs3kLWgCeZ7relZnw6l5CA2Q2Hp2SSgwCwCe4q+RWF4JuWGa2raVIAi0GNK36jfIsSrDTJ0pV0JulelxHIvv+xKGoSq0gm+4YGceL+ZVFEWSJMnjDZMtTM17ve8gVei6EPONsJ8a36qqctqBwh9+/QypvRJP0QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/c2b3d7f96ba10755993f387497ed47ab/a59e9/event_based6.webp 192w,
+/static/c2b3d7f96ba10755993f387497ed47ab/0ca9f/event_based6.webp 384w,
+/static/c2b3d7f96ba10755993f387497ed47ab/dc9b9/event_based6.webp 768w,
+/static/c2b3d7f96ba10755993f387497ed47ab/f5086/event_based6.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/c2b3d7f96ba10755993f387497ed47ab/3b721/event_based6.png 192w,
+/static/c2b3d7f96ba10755993f387497ed47ab/66595/event_based6.png 384w,
+/static/c2b3d7f96ba10755993f387497ed47ab/fe486/event_based6.png 768w,
+/static/c2b3d7f96ba10755993f387497ed47ab/28211/event_based6.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/c2b3d7f96ba10755993f387497ed47ab/fe486/event_based6.png"
+            alt="event_based6"
+            title="event_based6"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+</li>
+<li>
+<p>백그라운드에서는 작업이 완료되면 태스크 큐로 보냅니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4323db4fcd2d312d6b90dd9d909b7f13/28211/event_based7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEklEQVQoz22S2aqGMAyEff+380IQvBHEBRfc9yU/XyDSczAwtE2TyTSNN8+zjOMoVVXJNE2yLIscx6Hruq7SNI2C8zAMgqVpKm3barwBHnweSa5d1yX7vmsQRbIsU/R9r4Xu+5aiKLQYcfjO81QoIYnY8zy6WhCqwbZtbzJ77lDzZcR9ElINRayuQYhCCMmjBcRx5g7fJyHouk6T8RusPXme6/NQi4/+GsdLaIaTAPe5Bs4YPS3L8o23QkpIIgQoCsNQq7PHz1NMAWSsgGcixL17CflVEpMkEd/3JYoiHRMjYAW0wT7ny6xlHhvrVRzHEgSBjoWNjwsjNwIXr0KXnWD6w7NRh3JgQ81c1nX9h/C//QAyKAo2bqUT+wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4323db4fcd2d312d6b90dd9d909b7f13/a59e9/event_based7.webp 192w,
+/static/4323db4fcd2d312d6b90dd9d909b7f13/0ca9f/event_based7.webp 384w,
+/static/4323db4fcd2d312d6b90dd9d909b7f13/dc9b9/event_based7.webp 768w,
+/static/4323db4fcd2d312d6b90dd9d909b7f13/f5086/event_based7.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4323db4fcd2d312d6b90dd9d909b7f13/3b721/event_based7.png 192w,
+/static/4323db4fcd2d312d6b90dd9d909b7f13/66595/event_based7.png 384w,
+/static/4323db4fcd2d312d6b90dd9d909b7f13/fe486/event_based7.png 768w,
+/static/4323db4fcd2d312d6b90dd9d909b7f13/28211/event_based7.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4323db4fcd2d312d6b90dd9d909b7f13/fe486/event_based7.png"
+            alt="event_based7"
+            title="event_based7"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>백그라운드에서 3초를 센 후 <code class="language-text">run</code> 함수를 태스크 큐로 보냅니다. 그림에서는 태스크 큐가 하나의 큐처럼 그렸지만 <strong>실제로는 여러 개의 큐로 이루어져 있습니다.</strong></p>
+</li>
+<li>
+<p>이벤트 루프는 호출 스택이 비어 있으면 태스크 큐에서 함수를 하나씩 가져와 호출 스택에 넣습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ae78c6791ff0cb2fc85eae217831e594/28211/event_based8.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVQoz3WS6QqDQAyEff/Ha/8KIniBonhbr5QvMMUWGwhiMjuTzG4wjqP1fW9lWdowDDbPs63ratM02bIs1jSN1XXt9a7rjEjT1OvglfBQCwBeY993e71eTnie51cPgeM4rCgKFwCH+LZtnk4IO6HDgETIYQV9CCFgmrtA5JZQK98RUoOQc1jQtq3/06MW8AMYIKkpUBMhfRESeZ77esIhLlxAk0vRFyBTShEwoqT8zrLML1EkqjshNwgRRj+fT4vj+Guy36DGqnoReg0fQnnCU3g8HhaGoU94XfWa/0K9QP7xjaLIkiT5eIOyUtNc1/sV8gnvbphD8o2EiDXxraqqv3Yw4RtBlgzQBaYS6AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/ae78c6791ff0cb2fc85eae217831e594/a59e9/event_based8.webp 192w,
+/static/ae78c6791ff0cb2fc85eae217831e594/0ca9f/event_based8.webp 384w,
+/static/ae78c6791ff0cb2fc85eae217831e594/dc9b9/event_based8.webp 768w,
+/static/ae78c6791ff0cb2fc85eae217831e594/f5086/event_based8.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/ae78c6791ff0cb2fc85eae217831e594/3b721/event_based8.png 192w,
+/static/ae78c6791ff0cb2fc85eae217831e594/66595/event_based8.png 384w,
+/static/ae78c6791ff0cb2fc85eae217831e594/fe486/event_based8.png 768w,
+/static/ae78c6791ff0cb2fc85eae217831e594/28211/event_based8.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/ae78c6791ff0cb2fc85eae217831e594/fe486/event_based8.png"
+            alt="event_based8"
+            title="event_based8"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>호출 스택으로 올려진 <code class="language-text">run</code>은 실행됩니다.</p>
+</li>
+<li>
+<p><code class="language-text">console.log('3초 후 실행')</code>이 호출됩니다.</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  👉console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2765356ef259ec1bbc2257d86dadd189/28211/event_based9.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABFklEQVQoz3WS6aqEMAxG+/6PJ/4UBJcR931fcjmFiA53AqElTU7yRc04jtL3veR5LsMwyDzPsm2bTNMky7JIXddSVZWNd10nWBRFNk6+OhxihsSnHcch67pa4HVdrzcanOcpaZraO43xfd+tWyDkp5GgQIrVgCukLEv7Tt7TGM40TWMLSWQ6Gqjk/4DEkN62rVDLSQ1vSDdhGEqSJPL5fKwU9gOQbgoEpkCMfGDIJI/mmmcA8BjHsT35OEjRjiQzAa77pnmWZTdE4xaoX4vpXNeVIAhek30bMSTrH6F/ww2kmO5M6DiOeJ53L1ulPv2X6ZvhApTT9/3XDumsrtM85X03shM+6UymMN0bDgiZ7Lcoip/rYMI/t5wK/EMjCKkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/2765356ef259ec1bbc2257d86dadd189/a59e9/event_based9.webp 192w,
+/static/2765356ef259ec1bbc2257d86dadd189/0ca9f/event_based9.webp 384w,
+/static/2765356ef259ec1bbc2257d86dadd189/dc9b9/event_based9.webp 768w,
+/static/2765356ef259ec1bbc2257d86dadd189/f5086/event_based9.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/2765356ef259ec1bbc2257d86dadd189/3b721/event_based9.png 192w,
+/static/2765356ef259ec1bbc2257d86dadd189/66595/event_based9.png 384w,
+/static/2765356ef259ec1bbc2257d86dadd189/fe486/event_based9.png 768w,
+/static/2765356ef259ec1bbc2257d86dadd189/28211/event_based9.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/2765356ef259ec1bbc2257d86dadd189/fe486/event_based9.png"
+            alt="event_based9"
+            title="event_based9"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><code class="language-text">console.log('3초 후 실행')</code>이 호출하면서 콘솔에 <code class="language-text">3초 후 실행</code>이 출력되고, <code class="language-text">concole.log</code> 함수의 역할이 끝나면 호출 스택에서 빠집니다.</p>
+</li>
+<li>
+<p><code class="language-text">run</code> 함수가 실행 완료 후 호출 스택에서 비워집니다.</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'3초 후 실행'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+👉<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'시작'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>run<span class="token punctuation">.</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'끝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4639dd2e0b1e82bd2b0bf42d9719a65d/28211/event_based10.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.041666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBElEQVQoz3WSSQqEQAxFvf/t3AkuXCiK8zwPaV4gYjfth6AkqZehyhnHUfq+lzzPZRgGmedZtm2TaZpkWRap61qqqlJ/13WCoihSP/lmcPA5JD51HIes66rA67q+YhQ4z1PSNNV/CmP7vqspEDqyw8AMyGETcYOUZalx8p6iub9AG/kfEB+jt20rTdPol3GJwXoFUs2AxAyIkiRRGGOSR3HLu4EmIECtIsl0gNm+4ziWLMtuiPkVyA1ziIqe52nys7Nf4WNkexH2Gm4gt0r1MAzFdV3xff9eto36tDdZzOGHjvgGQaBvzHZIZTPr5jnebyHt8O1CbG8YIMbk8RdF8boOOvwASokNqGtdQyYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4639dd2e0b1e82bd2b0bf42d9719a65d/a59e9/event_based10.webp 192w,
+/static/4639dd2e0b1e82bd2b0bf42d9719a65d/0ca9f/event_based10.webp 384w,
+/static/4639dd2e0b1e82bd2b0bf42d9719a65d/dc9b9/event_based10.webp 768w,
+/static/4639dd2e0b1e82bd2b0bf42d9719a65d/f5086/event_based10.webp 1069w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4639dd2e0b1e82bd2b0bf42d9719a65d/3b721/event_based10.png 192w,
+/static/4639dd2e0b1e82bd2b0bf42d9719a65d/66595/event_based10.png 384w,
+/static/4639dd2e0b1e82bd2b0bf42d9719a65d/fe486/event_based10.png 768w,
+/static/4639dd2e0b1e82bd2b0bf42d9719a65d/28211/event_based10.png 1069w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4639dd2e0b1e82bd2b0bf42d9719a65d/fe486/event_based10.png"
+            alt="event_based10"
+            title="event_based10"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>호출 스택, 백그라운드, 태스트 큐가 다 비워있으면 자바스크립트 실행이 완료된 것입니다.</p>
+</li>
+</ol>
+<p><strong>이벤트 루프는 호출 스택이 비어 있을 때만 태스크 큐에 있는 콜백 함수들을 호출 스택으로 가져오기 때문에</strong> 만약 호출 스택에 함수들이 너무 많으면 <strong><code class="language-text">setTimeout</code>의 콜백이 정확한 시간에 실행되지 않을 수 있습니다.</strong></p></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© 2022 Developer Jaeseok, Powered By Gatsby.</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/Node/node_js_textbook/definition_of_node/event_based/";window.___webpackCompilationHash="638c97ef7f1a4585f29f";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-4718f0fec20e0d09d7f5.js"],"app":["/app-f35c8af03fafe1260385.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-33585fe7643d5714358c.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-0f6c94ca0b9140a47dd4.js"],"component---src-pages-info-tsx":["/component---src-pages-info-tsx-af04f2ce9f8722512044.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c8fd2ead919f8c35e72c.js"]};/*]]>*/</script><script src="/polyfill-4718f0fec20e0d09d7f5.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-c8fd2ead919f8c35e72c.js" async=""></script><script src="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-c31a89fe65d89ac0c62a.js" async=""></script><script src="/cb1608f2-d860e9dbef9a05cd5b64.js" async=""></script><script src="/app-f35c8af03fafe1260385.js" async=""></script><script src="/framework-6bdc9aaa9caa3de6408b.js" async=""></script><script src="/webpack-runtime-fa85d024fbaaccac3e76.js" async=""></script></body></html>
