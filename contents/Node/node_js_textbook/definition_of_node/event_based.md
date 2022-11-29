@@ -10,7 +10,7 @@ thumbnail: '../images/node_js_textbook.jpg'
 
 이벤트 기반(event-driven)이란 이벤트가 발생할 때 미리 지정해둔 작업을 수행하는 방식을 의미합니다. 이벤트 기반 시스템에서는 특정 이벤트가 발생할 때 무엇을 할지 미리 등록해두어야 합니다. 이를 이벤트 리스너(event listener)에 콜백(callback) 함수를 등록한다고 표현합니다. 노드도 이벤트 기반 방식으로 동작하므로. 이벤트가 발생하면 이벤트 리스너에 등록해둔 콜백 함수를 호출합니다. 발생한 이벤트가 없거나 발생했던 이벤트를 다 처리하면. 노드는 다음 이벤트가 발생할 때까지 대기합니다.
 
-![event_based](./images/event_based.JPG)
+![event_based](./images/event_based.jpg)
 
 노드가 자바스크립트 코드와 함께 실행되는 내부 과정을 알아보겠습니다.
 
