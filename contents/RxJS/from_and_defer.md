@@ -3,7 +3,7 @@ date: '2022-09-13'
 title: 'RxJS의 from()과 defer()'
 categories: ['RxJS']
 summary: 'RxJS의 from()과 defer()'
-thumbnail: '../images/node_js_textbook.jpg'
+thumbnail: './images/rxjs_logo.png'
 ---
 
 # RxJS의 from()과 defer()
