@@ -11,7 +11,7 @@ thumbnail: './images/rxjs_logo.png'
 프로젝트를 진행하면서, 외부 API를 호출할 때 RxJS 라이브러리의 defer() 함수와 from() 함수의 동작 방식이 다르다는 것을 알게 되었습니다. 이에 두 함수의 차이점을 직접 실행하면서 비교해보았습니다.
 
 <aside>
-📚 이 포스트는 [RxJS](https://rxjs.dev/)와 [JavaScript의 Promise](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)에 대한 기본적인 지식이 있다면, 쉽게 이해할 수 있습니다.
+📚 이 포스트는 <a href="https://rxjs.dev/">RxJS</a>와 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise">JavaScript의 Promise</a>에 대한 기본적인 지식이 있다면, 쉽게 이해할 수 있습니다.
 
 </aside>
 
@@ -112,4 +112,4 @@ from()으로 생성된 Promise Observable은 reject로 인해 에러가 발생�
 
 위 실험 결과, 에러가 발생했을 때 retry 연산자를 통해 defer() 함수는 매번 새로운 Promise를 생성하여 구독하고, from() 함수는 이미 완료된 Promise를 그대로 재구독하는 것을 알 수 있습니다.
 
-이러한 특성 때문에, from() 함수는 이미 실행 중이거나 완료한 프로미스를 옵저버블로 만들 때 적합하고 defer() 함수는 프로미스 실행 시점이 구독하는 시점이어야 할 때 적합하고 상황에 따라 defer()함수와 from() 함수 중 적절한 생성 함수를 사용해야합니다.
+이러한 특성 때문에, from() 함수는 이미 실행 중이거나 완료한 프로미스를 옵저버블로 만들 때 적합하고 defer() 함수는 프로미스 실행 시점이 구독하는 시점이어야 할 때 적합합니다. 상황에 따라 defer()함수와 from() 함수 중 적절한 생성 함수를 선택해서 사용해야합니다.
