@@ -1,5 +1,5 @@
 ---
-date: '2022-10-11'
+date: '2022-04-11'
 title: '복합 인덱스'
 categories: ['DB']
 summary: '복합 인덱스'
